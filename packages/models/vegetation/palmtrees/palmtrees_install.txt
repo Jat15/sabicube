@@ -1,0 +1,19 @@
+
+For use palmtrees textures and map-models package :
+
+
+1) COPY this folder ("packages") in your Sauerbraten installation folder
+   (without modifying its contents)
+
+
+2) ADD THIS LINE :
+
+exec "packages/models/vegetation/palmtrees/package.cfg"
+
+
+- at the end (very important !) of the the file :
+
+  " date/default_map_settings.cfg "
+
+
+- which is in your root Sauerbraten folder.

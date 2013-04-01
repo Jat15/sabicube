@@ -1,0 +1,49 @@
+So you want to build a game?
+
+Use F1 to enter edit-mode
+
+if you hold down G and use your scroll-wheel, you'll notice that the selection tool gets bigger when you scroll up and smaler when you scroll down
+
+left-click on the ground and use your scrollwheel to elevate or lower the selected.
+
+if you want to select a bigger area, you can either use a bigger selection-tool, or left-click and then right-click to add to your selection.
+
+Try elevating a place on the map, then select the cube you have created and click F2 to select a texture.
+
+If yiou dont want your map to be all cubes, you can either use the heightmap (click h and use your scrollwheel to elevate or lower), or you can edit the cubes by holding down Q and using your scrollwheel to lower the edges of a selected cube.
+Please note that using heightmap can cause other areas of the the map to deform, so use with caution, and if you want to undo you just click U.
+
+To place a mapmodel, light, monster, pickup-able-item or npc, just click ESC and choose SabiCube
+
+If you want to add more textures to your map you can edit the yourmapname.cfg located in /packages/base/. I'm planning to make packages of related textures and models to choose from in the SabiCube menu, you can try the texturepacks i the menu, but it wont be persistent atm.
+
+If you place a consumable item, the player can pick it up and it will show up in the player-inventory, no need to script anything, you just place an item and use F1 to exit and enter editmode.
+
+If you want o have dialogs, you can't avoid scripting, but dont be alarmed by the concept, it's actually pretty easy.
+Have a look at the example below, its a simple script for an npc with the mapmodel number 166:
+
+// called whenever the mapmodel 166 is activated (player click item)
+item_activate_166 = [
+	// what to do, in this case show a gui called HiThere (remember casesensetive)
+    showgui HiThere
+]
+
+// create the gui HiThere
+newgui HiThere [
+    // npc says Hi there
+    guitext "Hi there"
+    guibar
+    // button with text "Hi", action [closegui] does excatly what you would expect ;)
+    guibutton "Hi" [closegui]
+    // button with text "Who are you", action [showgui blabla] opens a new gui
+    guibutton "Who are you" [showgui blabla]
+]
+
+// create the gui blabla
+newgui blabla [
+    // npc says "My name is Mud"
+    guitext "My name is Mud"
+    guibar
+    // button with text "Ok", action [closegui] does excatly what you would expect ;)
+    guibutton "Ok" [closegui]
+]

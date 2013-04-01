@@ -325,6 +325,8 @@ find -name "*.BAK" -exec rm -rf {} \;
 Search for a text string recursively with -r option:
 grep -r "barrel" ./*
 
+git add .
+git commit -a
 
 possible items, ideas and other stuff:
 **************************** Weapons / ammo
