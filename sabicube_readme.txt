@@ -327,7 +327,7 @@ grep -r "barrel" ./*
 
 git status
 git add -A
-git commit --all
+git commit -a
 git push origin master
 
 
